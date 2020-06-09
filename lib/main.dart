@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:whisper/resources/firebase_repository.dart';
 import 'package:whisper/screens/home_screen.dart';
 import 'package:whisper/screens/login_screen.dart';
+import 'package:whisper/screens/search_screen.dart';
+import 'package:whisper/utilities/universal_constants.dart';
+import 'package:flutter/services.dart';
 
 void main() {
   runApp(MyApp());
@@ -12,6 +15,17 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      initialRoute: '/',
+      routes: {
+        '/search_screen': (context) => SearchScreen(),
+      },
+      theme: ThemeData(
+          primaryColor: UniversalVariables.gradientColorStart,
+          appBarTheme: AppBarTheme(
+            brightness: Brightness.dark,
+          )
+          // accentColor: Colors.white,
+          ),
       debugShowCheckedModeBanner: false,
       title: 'Whisper',
       home: Home(),
@@ -28,11 +42,13 @@ class _HomeState extends State<Home> {
   FirebaseRepository _firebaseRepository = FirebaseRepository();
   @override
   Widget build(BuildContext context) {
+    // _firebaseRepository.signOut();
     return Scaffold(
         body: FutureBuilder(
             future: _firebaseRepository.getCurrentUser(),
             builder: (context, AsyncSnapshot<FirebaseUser> snapshot) {
               if (snapshot.hasData) {
+                print('data = ${snapshot.data}');
                 return HomeScreen();
               } else {
                 return LoginScreen();

@@ -5,10 +5,12 @@ INJECTED from /home/shree/Flutter/Projects/whisper/android/app/src/main/AndroidM
 INJECTED from /home/shree/Flutter/Projects/whisper/android/app/src/main/AndroidManifest.xml:1:1-47:12
 INJECTED from /home/shree/Flutter/Projects/whisper/android/app/src/main/AndroidManifest.xml:1:1-47:12
 MERGED from /home/shree/Flutter/Projects/whisper/android/app/src/main/AndroidManifest.xml:1:1-47:12
-MERGED from [:firebase_auth] /home/shree/Flutter/Projects/whisper/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-15:12
-MERGED from [:permission_handler] /home/shree/Flutter/Projects/whisper/build/permission_handler/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
-MERGED from [:cloud_firestore] /home/shree/Flutter/Projects/whisper/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-15:12
 MERGED from [:google_sign_in] /home/shree/Flutter/Projects/whisper/build/google_sign_in/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:sqflite] /home/shree/Flutter/Projects/whisper/build/sqflite/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [:path_provider] /home/shree/Flutter/Projects/whisper/build/path_provider/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [:cloud_firestore] /home/shree/Flutter/Projects/whisper/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-15:12
+MERGED from [:permission_handler] /home/shree/Flutter/Projects/whisper/build/permission_handler/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [:firebase_auth] /home/shree/Flutter/Projects/whisper/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-15:12
 MERGED from [:firebase_core] /home/shree/Flutter/Projects/whisper/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-15:12
 MERGED from [androidx.multidex:multidex:2.0.0] /home/shree/.gradle/caches/transforms-2/files-2.1/1e43ec82407637f465c620e746b223b7/multidex-2.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-analytics:17.2.2] /home/shree/.gradle/caches/transforms-2/files-2.1/2a70ee504bd32b1bd949b6dd58d86852/firebase-analytics-17.2.2/AndroidManifest.xml:2:1-9:12
@@ -16,11 +18,11 @@ MERGED from [com.google.firebase:firebase-auth:19.2.0] /home/shree/.gradle/cache
 MERGED from [com.google.android.gms:play-services-measurement:17.2.2] /home/shree/.gradle/caches/transforms-2/files-2.1/a2d3f38d709f8b9f54c2677fdca8f29a/play-services-measurement-17.2.2/AndroidManifest.xml:17:1-55:12
 MERGED from [com.google.android.gms:play-services-measurement-api:17.2.2] /home/shree/.gradle/caches/transforms-2/files-2.1/ca912bff2260618b5b638fe661521702/play-services-measurement-api-17.2.2/AndroidManifest.xml:17:1-36:12
 MERGED from [com.google.android.gms:play-services-measurement-sdk:17.2.2] /home/shree/.gradle/caches/transforms-2/files-2.1/7043a9d5f4a737f3f819087d2037f972/play-services-measurement-sdk-17.2.2/AndroidManifest.xml:17:1-25:12
+MERGED from [com.google.android.gms:play-services-auth:16.0.1] /home/shree/.gradle/caches/transforms-2/files-2.1/a2cd7dfe8f1eb67d495f41b5f705d1aa/jetified-play-services-auth-16.0.1/AndroidManifest.xml:17:1-39:12
 MERGED from [com.google.firebase:firebase-firestore:21.3.0] /home/shree/.gradle/caches/transforms-2/files-2.1/d84e8da502b2e4908e75509e88aeba4b/jetified-firebase-firestore-21.3.0/AndroidManifest.xml:2:1-26:12
 MERGED from [com.google.firebase:firebase-iid:20.0.2] /home/shree/.gradle/caches/transforms-2/files-2.1/f26cdfb5f8d69cbc9663543f3ec1de65/firebase-iid-20.0.2/AndroidManifest.xml:17:1-47:12
 MERGED from [com.google.firebase:firebase-auth-interop:19.0.0] /home/shree/.gradle/caches/transforms-2/files-2.1/516d475c610d5ee0701cc5d0e0043980/firebase-auth-interop-19.0.0/AndroidManifest.xml:2:1-10:12
 MERGED from [com.google.firebase:firebase-common:19.3.0] /home/shree/.gradle/caches/transforms-2/files-2.1/9d203995d71537995f62a794a49c18e9/jetified-firebase-common-19.3.0/AndroidManifest.xml:15:1-39:12
-MERGED from [com.google.android.gms:play-services-auth:16.0.1] /home/shree/.gradle/caches/transforms-2/files-2.1/a2cd7dfe8f1eb67d495f41b5f705d1aa/jetified-play-services-auth-16.0.1/AndroidManifest.xml:17:1-39:12
 MERGED from [com.google.android.gms:play-services-measurement-impl:17.2.2] /home/shree/.gradle/caches/transforms-2/files-2.1/160985c233e23f79bad9a37e22a7158f/play-services-measurement-impl-17.2.2/AndroidManifest.xml:17:1-40:12
 MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.2.2] /home/shree/.gradle/caches/transforms-2/files-2.1/141d94a470ee9666d17d69a1744b7285/play-services-measurement-sdk-api-17.2.2/AndroidManifest.xml:17:1-27:12
 MERGED from [com.google.android.gms:play-services-measurement-base:17.2.2] /home/shree/.gradle/caches/transforms-2/files-2.1/ee291fe42f7ab95bb28e88f1406e2eac/play-services-measurement-base-17.2.2/AndroidManifest.xml:2:1-9:12
@@ -73,10 +75,10 @@ INJECTED from /home/shree/Flutter/Projects/whisper/android/app/src/debug/Android
 		ADDED from /home/shree/Flutter/Projects/whisper/android/app/src/main/AndroidManifest.xml:1:11-69
 application
 ADDED from /home/shree/Flutter/Projects/whisper/android/app/src/main/AndroidManifest.xml:8:5-46:19
-MERGED from [:firebase_auth] /home/shree/Flutter/Projects/whisper/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
-MERGED from [:firebase_auth] /home/shree/Flutter/Projects/whisper/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
 MERGED from [:cloud_firestore] /home/shree/Flutter/Projects/whisper/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
 MERGED from [:cloud_firestore] /home/shree/Flutter/Projects/whisper/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
+MERGED from [:firebase_auth] /home/shree/Flutter/Projects/whisper/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
+MERGED from [:firebase_auth] /home/shree/Flutter/Projects/whisper/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
 MERGED from [:firebase_core] /home/shree/Flutter/Projects/whisper/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
 MERGED from [:firebase_core] /home/shree/Flutter/Projects/whisper/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
 MERGED from [com.google.firebase:firebase-analytics:17.2.2] /home/shree/.gradle/caches/transforms-2/files-2.1/2a70ee504bd32b1bd949b6dd58d86852/firebase-analytics-17.2.2/AndroidManifest.xml:7:5-20
@@ -89,6 +91,8 @@ MERGED from [com.google.android.gms:play-services-measurement-api:17.2.2] /home/
 MERGED from [com.google.android.gms:play-services-measurement-api:17.2.2] /home/shree/.gradle/caches/transforms-2/files-2.1/ca912bff2260618b5b638fe661521702/play-services-measurement-api-17.2.2/AndroidManifest.xml:26:5-34:19
 MERGED from [com.google.android.gms:play-services-measurement-sdk:17.2.2] /home/shree/.gradle/caches/transforms-2/files-2.1/7043a9d5f4a737f3f819087d2037f972/play-services-measurement-sdk-17.2.2/AndroidManifest.xml:22:5-23:19
 MERGED from [com.google.android.gms:play-services-measurement-sdk:17.2.2] /home/shree/.gradle/caches/transforms-2/files-2.1/7043a9d5f4a737f3f819087d2037f972/play-services-measurement-sdk-17.2.2/AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.android.gms:play-services-auth:16.0.1] /home/shree/.gradle/caches/transforms-2/files-2.1/a2cd7dfe8f1eb67d495f41b5f705d1aa/jetified-play-services-auth-16.0.1/AndroidManifest.xml:22:5-37:19
+MERGED from [com.google.android.gms:play-services-auth:16.0.1] /home/shree/.gradle/caches/transforms-2/files-2.1/a2cd7dfe8f1eb67d495f41b5f705d1aa/jetified-play-services-auth-16.0.1/AndroidManifest.xml:22:5-37:19
 MERGED from [com.google.firebase:firebase-firestore:21.3.0] /home/shree/.gradle/caches/transforms-2/files-2.1/d84e8da502b2e4908e75509e88aeba4b/jetified-firebase-firestore-21.3.0/AndroidManifest.xml:16:5-24:19
 MERGED from [com.google.firebase:firebase-firestore:21.3.0] /home/shree/.gradle/caches/transforms-2/files-2.1/d84e8da502b2e4908e75509e88aeba4b/jetified-firebase-firestore-21.3.0/AndroidManifest.xml:16:5-24:19
 MERGED from [com.google.firebase:firebase-iid:20.0.2] /home/shree/.gradle/caches/transforms-2/files-2.1/f26cdfb5f8d69cbc9663543f3ec1de65/firebase-iid-20.0.2/AndroidManifest.xml:28:5-45:19
@@ -97,8 +101,6 @@ MERGED from [com.google.firebase:firebase-auth-interop:19.0.0] /home/shree/.grad
 MERGED from [com.google.firebase:firebase-auth-interop:19.0.0] /home/shree/.gradle/caches/transforms-2/files-2.1/516d475c610d5ee0701cc5d0e0043980/firebase-auth-interop-19.0.0/AndroidManifest.xml:7:5-8:19
 MERGED from [com.google.firebase:firebase-common:19.3.0] /home/shree/.gradle/caches/transforms-2/files-2.1/9d203995d71537995f62a794a49c18e9/jetified-firebase-common-19.3.0/AndroidManifest.xml:25:5-37:19
 MERGED from [com.google.firebase:firebase-common:19.3.0] /home/shree/.gradle/caches/transforms-2/files-2.1/9d203995d71537995f62a794a49c18e9/jetified-firebase-common-19.3.0/AndroidManifest.xml:25:5-37:19
-MERGED from [com.google.android.gms:play-services-auth:16.0.1] /home/shree/.gradle/caches/transforms-2/files-2.1/a2cd7dfe8f1eb67d495f41b5f705d1aa/jetified-play-services-auth-16.0.1/AndroidManifest.xml:22:5-37:19
-MERGED from [com.google.android.gms:play-services-auth:16.0.1] /home/shree/.gradle/caches/transforms-2/files-2.1/a2cd7dfe8f1eb67d495f41b5f705d1aa/jetified-play-services-auth-16.0.1/AndroidManifest.xml:22:5-37:19
 MERGED from [com.google.android.gms:play-services-measurement-impl:17.2.2] /home/shree/.gradle/caches/transforms-2/files-2.1/160985c233e23f79bad9a37e22a7158f/play-services-measurement-impl-17.2.2/AndroidManifest.xml:28:5-38:19
 MERGED from [com.google.android.gms:play-services-measurement-impl:17.2.2] /home/shree/.gradle/caches/transforms-2/files-2.1/160985c233e23f79bad9a37e22a7158f/play-services-measurement-impl-17.2.2/AndroidManifest.xml:28:5-38:19
 MERGED from [com.google.android.gms:play-services-measurement-base:17.2.2] /home/shree/.gradle/caches/transforms-2/files-2.1/ee291fe42f7ab95bb28e88f1406e2eac/play-services-measurement-base-17.2.2/AndroidManifest.xml:7:5-20
@@ -175,14 +177,18 @@ uses-sdk
 INJECTED from /home/shree/Flutter/Projects/whisper/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/shree/Flutter/Projects/whisper/android/app/src/main/AndroidManifest.xml
 INJECTED from /home/shree/Flutter/Projects/whisper/android/app/src/main/AndroidManifest.xml
-MERGED from [:firebase_auth] /home/shree/Flutter/Projects/whisper/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:firebase_auth] /home/shree/Flutter/Projects/whisper/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:permission_handler] /home/shree/Flutter/Projects/whisper/build/permission_handler/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:permission_handler] /home/shree/Flutter/Projects/whisper/build/permission_handler/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:cloud_firestore] /home/shree/Flutter/Projects/whisper/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:cloud_firestore] /home/shree/Flutter/Projects/whisper/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:google_sign_in] /home/shree/Flutter/Projects/whisper/build/google_sign_in/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:google_sign_in] /home/shree/Flutter/Projects/whisper/build/google_sign_in/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:sqflite] /home/shree/Flutter/Projects/whisper/build/sqflite/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:sqflite] /home/shree/Flutter/Projects/whisper/build/sqflite/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:path_provider] /home/shree/Flutter/Projects/whisper/build/path_provider/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:path_provider] /home/shree/Flutter/Projects/whisper/build/path_provider/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:cloud_firestore] /home/shree/Flutter/Projects/whisper/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:cloud_firestore] /home/shree/Flutter/Projects/whisper/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:permission_handler] /home/shree/Flutter/Projects/whisper/build/permission_handler/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:permission_handler] /home/shree/Flutter/Projects/whisper/build/permission_handler/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:firebase_auth] /home/shree/Flutter/Projects/whisper/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:firebase_auth] /home/shree/Flutter/Projects/whisper/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:firebase_core] /home/shree/Flutter/Projects/whisper/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:firebase_core] /home/shree/Flutter/Projects/whisper/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [androidx.multidex:multidex:2.0.0] /home/shree/.gradle/caches/transforms-2/files-2.1/1e43ec82407637f465c620e746b223b7/multidex-2.0.0/AndroidManifest.xml:20:5-43
@@ -197,6 +203,8 @@ MERGED from [com.google.android.gms:play-services-measurement-api:17.2.2] /home/
 MERGED from [com.google.android.gms:play-services-measurement-api:17.2.2] /home/shree/.gradle/caches/transforms-2/files-2.1/ca912bff2260618b5b638fe661521702/play-services-measurement-api-17.2.2/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-measurement-sdk:17.2.2] /home/shree/.gradle/caches/transforms-2/files-2.1/7043a9d5f4a737f3f819087d2037f972/play-services-measurement-sdk-17.2.2/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-measurement-sdk:17.2.2] /home/shree/.gradle/caches/transforms-2/files-2.1/7043a9d5f4a737f3f819087d2037f972/play-services-measurement-sdk-17.2.2/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-auth:16.0.1] /home/shree/.gradle/caches/transforms-2/files-2.1/a2cd7dfe8f1eb67d495f41b5f705d1aa/jetified-play-services-auth-16.0.1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-auth:16.0.1] /home/shree/.gradle/caches/transforms-2/files-2.1/a2cd7dfe8f1eb67d495f41b5f705d1aa/jetified-play-services-auth-16.0.1/AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-firestore:21.3.0] /home/shree/.gradle/caches/transforms-2/files-2.1/d84e8da502b2e4908e75509e88aeba4b/jetified-firebase-firestore-21.3.0/AndroidManifest.xml:7:5-9:41
 MERGED from [com.google.firebase:firebase-firestore:21.3.0] /home/shree/.gradle/caches/transforms-2/files-2.1/d84e8da502b2e4908e75509e88aeba4b/jetified-firebase-firestore-21.3.0/AndroidManifest.xml:7:5-9:41
 MERGED from [com.google.firebase:firebase-iid:20.0.2] /home/shree/.gradle/caches/transforms-2/files-2.1/f26cdfb5f8d69cbc9663543f3ec1de65/firebase-iid-20.0.2/AndroidManifest.xml:20:5-44
@@ -205,8 +213,6 @@ MERGED from [com.google.firebase:firebase-auth-interop:19.0.0] /home/shree/.grad
 MERGED from [com.google.firebase:firebase-auth-interop:19.0.0] /home/shree/.gradle/caches/transforms-2/files-2.1/516d475c610d5ee0701cc5d0e0043980/firebase-auth-interop-19.0.0/AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-common:19.3.0] /home/shree/.gradle/caches/transforms-2/files-2.1/9d203995d71537995f62a794a49c18e9/jetified-firebase-common-19.3.0/AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.firebase:firebase-common:19.3.0] /home/shree/.gradle/caches/transforms-2/files-2.1/9d203995d71537995f62a794a49c18e9/jetified-firebase-common-19.3.0/AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.gms:play-services-auth:16.0.1] /home/shree/.gradle/caches/transforms-2/files-2.1/a2cd7dfe8f1eb67d495f41b5f705d1aa/jetified-play-services-auth-16.0.1/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-auth:16.0.1] /home/shree/.gradle/caches/transforms-2/files-2.1/a2cd7dfe8f1eb67d495f41b5f705d1aa/jetified-play-services-auth-16.0.1/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-measurement-impl:17.2.2] /home/shree/.gradle/caches/transforms-2/files-2.1/160985c233e23f79bad9a37e22a7158f/play-services-measurement-impl-17.2.2/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-measurement-impl:17.2.2] /home/shree/.gradle/caches/transforms-2/files-2.1/160985c233e23f79bad9a37e22a7158f/play-services-measurement-impl-17.2.2/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.2.2] /home/shree/.gradle/caches/transforms-2/files-2.1/141d94a470ee9666d17d69a1744b7285/play-services-measurement-sdk-api-17.2.2/AndroidManifest.xml:20:5-44
@@ -300,9 +306,9 @@ MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.2.2] /h
 	android:name
 		ADDED from /home/shree/Flutter/Projects/whisper/android/app/src/debug/AndroidManifest.xml:6:22-64
 service#com.google.firebase.components.ComponentDiscoveryService
-ADDED from [:firebase_auth] /home/shree/Flutter/Projects/whisper/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
-MERGED from [:cloud_firestore] /home/shree/Flutter/Projects/whisper/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
-MERGED from [:cloud_firestore] /home/shree/Flutter/Projects/whisper/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
+ADDED from [:cloud_firestore] /home/shree/Flutter/Projects/whisper/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
+MERGED from [:firebase_auth] /home/shree/Flutter/Projects/whisper/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
+MERGED from [:firebase_auth] /home/shree/Flutter/Projects/whisper/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
 MERGED from [:firebase_core] /home/shree/Flutter/Projects/whisper/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
 MERGED from [:firebase_core] /home/shree/Flutter/Projects/whisper/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
 MERGED from [com.google.firebase:firebase-auth:19.2.0] /home/shree/.gradle/caches/transforms-2/files-2.1/a83bb62cb43b672cf00b874e0ee6110c/firebase-auth-19.2.0/AndroidManifest.xml:33:9-39:19
@@ -322,19 +328,19 @@ MERGED from [com.google.firebase:firebase-common:19.3.0] /home/shree/.gradle/cac
 	android:directBootAware
 		ADDED from [com.google.firebase:firebase-common:19.3.0] /home/shree/.gradle/caches/transforms-2/files-2.1/9d203995d71537995f62a794a49c18e9/jetified-firebase-common-19.3.0/AndroidManifest.xml:34:13-43
 	android:name
-		ADDED from [:firebase_auth] /home/shree/Flutter/Projects/whisper/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:8:18-89
-meta-data#com.google.firebase.components:io.flutter.plugins.firebaseauth.FlutterFirebaseAppRegistrar
-ADDED from [:firebase_auth] /home/shree/Flutter/Projects/whisper/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
-	android:value
-		ADDED from [:firebase_auth] /home/shree/Flutter/Projects/whisper/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
-	android:name
-		ADDED from [:firebase_auth] /home/shree/Flutter/Projects/whisper/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-122
+		ADDED from [:cloud_firestore] /home/shree/Flutter/Projects/whisper/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:8:18-89
 meta-data#com.google.firebase.components:io.flutter.plugins.firebase.cloudfirestore.FlutterFirebaseAppRegistrar
 ADDED from [:cloud_firestore] /home/shree/Flutter/Projects/whisper/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
 	android:value
 		ADDED from [:cloud_firestore] /home/shree/Flutter/Projects/whisper/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
 	android:name
 		ADDED from [:cloud_firestore] /home/shree/Flutter/Projects/whisper/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-133
+meta-data#com.google.firebase.components:io.flutter.plugins.firebaseauth.FlutterFirebaseAppRegistrar
+ADDED from [:firebase_auth] /home/shree/Flutter/Projects/whisper/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
+	android:value
+		ADDED from [:firebase_auth] /home/shree/Flutter/Projects/whisper/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
+	android:name
+		ADDED from [:firebase_auth] /home/shree/Flutter/Projects/whisper/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-122
 meta-data#com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseAppRegistrar
 ADDED from [:firebase_core] /home/shree/Flutter/Projects/whisper/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
 	android:value
@@ -447,6 +453,24 @@ ADDED from [com.google.android.gms:play-services-measurement-api:17.2.2] /home/s
 		ADDED from [com.google.android.gms:play-services-measurement-api:17.2.2] /home/shree/.gradle/caches/transforms-2/files-2.1/ca912bff2260618b5b638fe661521702/play-services-measurement-api-17.2.2/AndroidManifest.xml:32:17-82
 	android:name
 		ADDED from [com.google.android.gms:play-services-measurement-api:17.2.2] /home/shree/.gradle/caches/transforms-2/files-2.1/ca912bff2260618b5b638fe661521702/play-services-measurement-api-17.2.2/AndroidManifest.xml:31:17-139
+activity#com.google.android.gms.auth.api.signin.internal.SignInHubActivity
+ADDED from [com.google.android.gms:play-services-auth:16.0.1] /home/shree/.gradle/caches/transforms-2/files-2.1/a2cd7dfe8f1eb67d495f41b5f705d1aa/jetified-play-services-auth-16.0.1/AndroidManifest.xml:23:9-27:75
+	android:excludeFromRecents
+		ADDED from [com.google.android.gms:play-services-auth:16.0.1] /home/shree/.gradle/caches/transforms-2/files-2.1/a2cd7dfe8f1eb67d495f41b5f705d1aa/jetified-play-services-auth-16.0.1/AndroidManifest.xml:25:13-46
+	android:exported
+		ADDED from [com.google.android.gms:play-services-auth:16.0.1] /home/shree/.gradle/caches/transforms-2/files-2.1/a2cd7dfe8f1eb67d495f41b5f705d1aa/jetified-play-services-auth-16.0.1/AndroidManifest.xml:26:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-auth:16.0.1] /home/shree/.gradle/caches/transforms-2/files-2.1/a2cd7dfe8f1eb67d495f41b5f705d1aa/jetified-play-services-auth-16.0.1/AndroidManifest.xml:27:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-auth:16.0.1] /home/shree/.gradle/caches/transforms-2/files-2.1/a2cd7dfe8f1eb67d495f41b5f705d1aa/jetified-play-services-auth-16.0.1/AndroidManifest.xml:24:13-93
+service#com.google.android.gms.auth.api.signin.RevocationBoundService
+ADDED from [com.google.android.gms:play-services-auth:16.0.1] /home/shree/.gradle/caches/transforms-2/files-2.1/a2cd7dfe8f1eb67d495f41b5f705d1aa/jetified-play-services-auth-16.0.1/AndroidManifest.xml:33:9-36:110
+	android:exported
+		ADDED from [com.google.android.gms:play-services-auth:16.0.1] /home/shree/.gradle/caches/transforms-2/files-2.1/a2cd7dfe8f1eb67d495f41b5f705d1aa/jetified-play-services-auth-16.0.1/AndroidManifest.xml:35:13-36
+	android:permission
+		ADDED from [com.google.android.gms:play-services-auth:16.0.1] /home/shree/.gradle/caches/transforms-2/files-2.1/a2cd7dfe8f1eb67d495f41b5f705d1aa/jetified-play-services-auth-16.0.1/AndroidManifest.xml:36:13-107
+	android:name
+		ADDED from [com.google.android.gms:play-services-auth:16.0.1] /home/shree/.gradle/caches/transforms-2/files-2.1/a2cd7dfe8f1eb67d495f41b5f705d1aa/jetified-play-services-auth-16.0.1/AndroidManifest.xml:34:13-89
 meta-data#com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar
 ADDED from [com.google.firebase:firebase-firestore:21.3.0] /home/shree/.gradle/caches/transforms-2/files-2.1/d84e8da502b2e4908e75509e88aeba4b/jetified-firebase-firestore-21.3.0/AndroidManifest.xml:20:13-22:85
 	android:value
@@ -487,24 +511,6 @@ ADDED from [com.google.firebase:firebase-common:19.3.0] /home/shree/.gradle/cach
 		ADDED from [com.google.firebase:firebase-common:19.3.0] /home/shree/.gradle/caches/transforms-2/files-2.1/9d203995d71537995f62a794a49c18e9/jetified-firebase-common-19.3.0/AndroidManifest.xml:30:13-36
 	android:name
 		ADDED from [com.google.firebase:firebase-common:19.3.0] /home/shree/.gradle/caches/transforms-2/files-2.1/9d203995d71537995f62a794a49c18e9/jetified-firebase-common-19.3.0/AndroidManifest.xml:27:13-77
-activity#com.google.android.gms.auth.api.signin.internal.SignInHubActivity
-ADDED from [com.google.android.gms:play-services-auth:16.0.1] /home/shree/.gradle/caches/transforms-2/files-2.1/a2cd7dfe8f1eb67d495f41b5f705d1aa/jetified-play-services-auth-16.0.1/AndroidManifest.xml:23:9-27:75
-	android:excludeFromRecents
-		ADDED from [com.google.android.gms:play-services-auth:16.0.1] /home/shree/.gradle/caches/transforms-2/files-2.1/a2cd7dfe8f1eb67d495f41b5f705d1aa/jetified-play-services-auth-16.0.1/AndroidManifest.xml:25:13-46
-	android:exported
-		ADDED from [com.google.android.gms:play-services-auth:16.0.1] /home/shree/.gradle/caches/transforms-2/files-2.1/a2cd7dfe8f1eb67d495f41b5f705d1aa/jetified-play-services-auth-16.0.1/AndroidManifest.xml:26:13-37
-	android:theme
-		ADDED from [com.google.android.gms:play-services-auth:16.0.1] /home/shree/.gradle/caches/transforms-2/files-2.1/a2cd7dfe8f1eb67d495f41b5f705d1aa/jetified-play-services-auth-16.0.1/AndroidManifest.xml:27:13-72
-	android:name
-		ADDED from [com.google.android.gms:play-services-auth:16.0.1] /home/shree/.gradle/caches/transforms-2/files-2.1/a2cd7dfe8f1eb67d495f41b5f705d1aa/jetified-play-services-auth-16.0.1/AndroidManifest.xml:24:13-93
-service#com.google.android.gms.auth.api.signin.RevocationBoundService
-ADDED from [com.google.android.gms:play-services-auth:16.0.1] /home/shree/.gradle/caches/transforms-2/files-2.1/a2cd7dfe8f1eb67d495f41b5f705d1aa/jetified-play-services-auth-16.0.1/AndroidManifest.xml:33:9-36:110
-	android:exported
-		ADDED from [com.google.android.gms:play-services-auth:16.0.1] /home/shree/.gradle/caches/transforms-2/files-2.1/a2cd7dfe8f1eb67d495f41b5f705d1aa/jetified-play-services-auth-16.0.1/AndroidManifest.xml:35:13-36
-	android:permission
-		ADDED from [com.google.android.gms:play-services-auth:16.0.1] /home/shree/.gradle/caches/transforms-2/files-2.1/a2cd7dfe8f1eb67d495f41b5f705d1aa/jetified-play-services-auth-16.0.1/AndroidManifest.xml:36:13-107
-	android:name
-		ADDED from [com.google.android.gms:play-services-auth:16.0.1] /home/shree/.gradle/caches/transforms-2/files-2.1/a2cd7dfe8f1eb67d495f41b5f705d1aa/jetified-play-services-auth-16.0.1/AndroidManifest.xml:34:13-89
 activity#com.google.android.gms.common.api.GoogleApiActivity
 ADDED from [com.google.android.gms:play-services-base:17.1.0] /home/shree/.gradle/caches/transforms-2/files-2.1/6eb14f512292913515d869914807ad40/play-services-base-17.1.0/AndroidManifest.xml:23:9-26:75
 	android:exported

@@ -60,4 +60,23 @@ class FirebaseMethods {
         .document(currentUser.uid)
         .setData(user.toMap(user));
   }
+
+  Future<void> signOut() async {
+    // await _googleSignIn.disconnect();
+    await _googleSignIn.signOut();
+    await _auth.signOut();
+  }
+
+  Future<List<User>> fetchAllUsers(FirebaseUser currentUser) async {
+    List<User> userList = List<User>();
+    QuerySnapshot querySnapshot =
+        await firestore.collection('users').getDocuments();
+
+    for (var i = 0; i < querySnapshot.documents.length; i++) {
+      if (querySnapshot.documents[i].documentID != currentUser.uid) {
+        userList.add(User.fromMap(querySnapshot.documents[i].data));
+      }
+    }
+    return userList;
+  }
 }

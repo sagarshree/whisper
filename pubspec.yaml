@@ -27,6 +27,11 @@ dependencies:
   permission_handler: ^5.0.0+hotfix.8
   firebase_auth: ^0.16.1
   google_sign_in: ^4.5.1
+  shimmer: ^1.1.1
+  font_awesome_flutter: ^8.8.1
+  material_design_icons_flutter: ^4.0.5345
+  cached_network_image: ^2.2.0+1
+  gradient_app_bar: ^0.1.3
 
 
   # The following adds the Cupertino Icons font to your application.
