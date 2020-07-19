@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:whisper/utilities/universal_constants.dart';
+import 'package:whisper/utils/universal_constants.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final Widget title;

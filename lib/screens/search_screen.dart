@@ -5,7 +5,7 @@ import 'package:gradient_app_bar/gradient_app_bar.dart';
 import 'package:whisper/models/user.dart';
 import 'package:whisper/resources/firebase_repository.dart';
 import 'package:whisper/screens/chatscreens/chat_screen.dart';
-import 'package:whisper/utilities/universal_constants.dart';
+import 'package:whisper/utils/universal_constants.dart';
 import 'package:whisper/widgets/custom_tile.dart';
 
 class SearchScreen extends StatefulWidget {
@@ -30,6 +30,7 @@ class _SearchScreenState extends State<SearchScreen> {
             });
           })
         });
+    print(userList);
   }
 
   searchAppbar(BuildContext context) {

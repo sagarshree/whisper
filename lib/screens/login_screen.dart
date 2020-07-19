@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:shimmer/shimmer.dart';
 import 'package:whisper/resources/firebase_repository.dart';
 import 'package:whisper/screens/home_screen.dart';
-import 'package:whisper/utilities/universal_constants.dart';
+import 'package:whisper/utils/universal_constants.dart';
 
 class LoginScreen extends StatefulWidget {
   @override

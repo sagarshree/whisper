@@ -1,14 +1,23 @@
 # This is a generated file; do not edit or check into version control.
+agora_rtc_engine=/home/shree/Flutter/sdk/flutter/.pub-cache/hosted/pub.dartlang.org/agora_rtc_engine-1.0.13/
 cloud_firestore=/home/shree/Flutter/sdk/flutter/.pub-cache/hosted/pub.dartlang.org/cloud_firestore-0.13.6/
 cloud_firestore_web=/home/shree/Flutter/sdk/flutter/.pub-cache/hosted/pub.dartlang.org/cloud_firestore_web-0.1.1+2/
+emoji_picker=/home/shree/Flutter/sdk/flutter/.pub-cache/hosted/pub.dartlang.org/emoji_picker-0.1.0/
 firebase_auth=/home/shree/Flutter/sdk/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_auth-0.16.1/
 firebase_auth_web=/home/shree/Flutter/sdk/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_auth_web-0.1.3+1/
 firebase_core=/home/shree/Flutter/sdk/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core-0.4.5/
 firebase_core_web=/home/shree/Flutter/sdk/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core_web-0.1.1+2/
+firebase_storage=/home/shree/Flutter/sdk/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_storage-3.1.6/
+flutter_plugin_android_lifecycle=/home/shree/Flutter/sdk/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_plugin_android_lifecycle-1.0.8/
 google_sign_in=/home/shree/Flutter/sdk/flutter/.pub-cache/hosted/pub.dartlang.org/google_sign_in-4.5.1/
 google_sign_in_web=/home/shree/Flutter/sdk/flutter/.pub-cache/hosted/pub.dartlang.org/google_sign_in_web-0.9.1+1/
+image_picker=/home/shree/Flutter/sdk/flutter/.pub-cache/hosted/pub.dartlang.org/image_picker-0.6.7+4/
+keyboard_visibility=/home/shree/Flutter/sdk/flutter/.pub-cache/hosted/pub.dartlang.org/keyboard_visibility-0.5.6/
 path_provider=/home/shree/Flutter/sdk/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider-1.6.10/
 path_provider_linux=/home/shree/Flutter/sdk/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_linux-0.0.1+1/
 path_provider_macos=/home/shree/Flutter/sdk/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_macos-0.0.4+3/
-permission_handler=/home/shree/Flutter/sdk/flutter/.pub-cache/hosted/pub.dartlang.org/permission_handler-5.0.0+hotfix.8/
+permission_handler=/home/shree/Flutter/sdk/flutter/.pub-cache/hosted/pub.dartlang.org/permission_handler-5.0.1+1/
+shared_preferences=/home/shree/Flutter/sdk/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences-0.5.7+3/
+shared_preferences_macos=/home/shree/Flutter/sdk/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences_macos-0.0.1+10/
+shared_preferences_web=/home/shree/Flutter/sdk/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences_web-0.1.2+7/
 sqflite=/home/shree/Flutter/sdk/flutter/.pub-cache/hosted/pub.dartlang.org/sqflite-1.3.0+2/

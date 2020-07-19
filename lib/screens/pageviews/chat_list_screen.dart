@@ -3,8 +3,8 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:whisper/resources/firebase_repository.dart';
-import 'package:whisper/utilities/universal_constants.dart';
-import 'package:whisper/utilities/utils.dart';
+import 'package:whisper/utils/universal_constants.dart';
+import 'package:whisper/utils/utils.dart';
 import 'package:whisper/widgets/appbar.dart';
 import 'package:whisper/widgets/custom_tile.dart';
 

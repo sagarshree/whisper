@@ -4,6 +4,10 @@
         "source": "/home/shree/.gradle/caches/transforms-2/files-2.1/a2cd7dfe8f1eb67d495f41b5f705d1aa/jetified-play-services-auth-16.0.1/res/drawable-watch-v20/common_google_signin_btn_text_disabled.xml"
     },
     {
+        "merged": "/home/shree/Flutter/Projects/whisper/build/app/intermediates/res/merged/debug/xml_flutter_image_picker_file_paths.xml.flat",
+        "source": "/home/shree/Flutter/Projects/whisper/build/image_picker/intermediates/packaged_res/debug/xml/flutter_image_picker_file_paths.xml"
+    },
+    {
         "merged": "/home/shree/Flutter/Projects/whisper/build/app/intermediates/res/merged/debug/drawable-xhdpi-v4_common_google_signin_btn_text_light_normal_background.9.png.flat",
         "source": "/home/shree/.gradle/caches/transforms-2/files-2.1/6eb14f512292913515d869914807ad40/play-services-base-17.1.0/res/drawable-xhdpi-v4/common_google_signin_btn_text_light_normal_background.9.png"
     },
