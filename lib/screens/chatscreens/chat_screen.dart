@@ -14,8 +14,11 @@ import 'package:whisper/models/user.dart';
 import 'package:whisper/provider/image_upload_provider.dart';
 import 'package:whisper/resources/call_methods.dart';
 import 'package:whisper/resources/firebase_repository.dart';
+import 'package:whisper/screens/callscreens/pickup/pickup_layout.dart';
+import 'package:whisper/screens/callscreens/pickup/pickup_screen.dart';
 import 'package:whisper/screens/chatscreens/widgets/cached_image.dart';
 import 'package:whisper/utils/call_utilities.dart';
+import 'package:whisper/utils/permissions.dart';
 import 'package:whisper/utils/universal_constants.dart';
 import 'package:whisper/utils/utils.dart';
 import 'package:whisper/widgets/appbar.dart';
@@ -96,13 +99,14 @@ class _ChatScreenState extends State<ChatScreen> {
             color: Colors.white,
             size: 28,
           ),
-          onPressed: () {
-            CallUtils.dial(
-              from: sender,
-              to: widget.receiver,
-              context: context,
-            );
-          },
+          onPressed: () async =>
+              await Permissions.cameraAndMicrophonePermissionsGranted()
+                  ? CallUtils.dial(
+                      from: sender,
+                      to: widget.receiver,
+                      context: context,
+                    )
+                  : {},
         ),
         IconButton(
           icon: Icon(
@@ -494,28 +498,30 @@ class _ChatScreenState extends State<ChatScreen> {
   @override
   Widget build(BuildContext context) {
     _imageUploadProvider = Provider.of<ImageUploadProvider>(context);
-    return Scaffold(
-      backgroundColor: UniversalVariables.blackColor,
-      appBar: customAppBar(context),
-      body: Column(
-        children: <Widget>[
-          Expanded(
-            child: messageList(),
-          ),
-          _imageUploadProvider.getViewState == ViewState.LOADING
-              ? Container(
-                  alignment: Alignment.centerRight,
-                  margin: EdgeInsets.only(right: 15),
-                  child: CircularProgressIndicator(),
-                )
-              : Container(),
-          chatControls(),
-          showEmojiPicker
-              ? Container(
-                  child: emojiContainer(),
-                )
-              : Container()
-        ],
+    return PickupLayout(
+      scaffold: Scaffold(
+        backgroundColor: UniversalVariables.blackColor,
+        appBar: customAppBar(context),
+        body: Column(
+          children: <Widget>[
+            Expanded(
+              child: messageList(),
+            ),
+            _imageUploadProvider.getViewState == ViewState.LOADING
+                ? Container(
+                    alignment: Alignment.centerRight,
+                    margin: EdgeInsets.only(right: 15),
+                    child: CircularProgressIndicator(),
+                  )
+                : Container(),
+            chatControls(),
+            showEmojiPicker
+                ? Container(
+                    child: emojiContainer(),
+                  )
+                : Container()
+          ],
+        ),
       ),
     );
   }

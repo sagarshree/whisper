@@ -104,9 +104,9 @@ androidx/versionedparcelable/NonParcelField.class
 androidx/versionedparcelable/ParcelField.class
 androidx/versionedparcelable/VersionedParcelize.class
 androidx/viewpager/widget/ViewPager$DecorView.class
-com/baseflow/permissionhandler/PermissionConstants$PermissionGroup.class
-com/baseflow/permissionhandler/PermissionConstants$PermissionStatus.class
-com/baseflow/permissionhandler/PermissionConstants$ServiceStatus.class
+com/baseflow/permissionhandler/PermissionHandlerPlugin$PermissionGroup.class
+com/baseflow/permissionhandler/PermissionHandlerPlugin$PermissionStatus.class
+com/baseflow/permissionhandler/PermissionHandlerPlugin$ServiceStatus.class
 com/google/android/gms/auth/api/accounttransfer/AuthenticatorTransferCompletionStatus.class
 com/google/android/gms/auth/api/credentials/Credential.class
 com/google/android/gms/auth/api/credentials/CredentialPickerConfig$Prompt.class

@@ -2,8 +2,11 @@ import 'dart:io';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
+import 'package:flutter/widgets.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:whisper/constants/strings.dart';
+import 'package:whisper/enum/user_state.dart';
+import 'package:whisper/models/contacts.dart';
 import 'package:whisper/models/message.dart';
 import 'package:whisper/models/user.dart';
 import 'package:whisper/provider/image_upload_provider.dart';
@@ -15,6 +18,8 @@ class FirebaseMethods {
   static final Firestore firestore = Firestore.instance;
   static final CollectionReference _userCollection =
       firestore.collection(kUsersCollection);
+  static final CollectionReference _messagesCollection =
+      firestore.collection(kMessagesCollection);
   StorageReference _storageReference;
   User user = User();
 
@@ -98,19 +103,48 @@ class FirebaseMethods {
 
   Future<void> addMessageToDb(
       Message message, User sender, User receiver) async {
+    Timestamp currentTime = Timestamp.now();
     var map = message.toMap();
 
-    await firestore
-        .collection(kMessagesCollection)
+    await _messagesCollection
         .document(message.receiverId)
         .collection(message.senderId)
         .add(map);
+    addToContacts(
+        senderId: message.senderId,
+        receiverId: message.receiverId,
+        currentTime: currentTime);
 
-    return await firestore
-        .collection(kMessagesCollection)
+    return await _messagesCollection
         .document(message.senderId)
         .collection(message.receiverId)
         .add(map);
+  }
+
+  DocumentReference getContactsDocument({String of, String to}) =>
+      _userCollection.document(of).collection(kContactsCollection).document(to);
+
+  Future<void> addToContacts(
+      {String senderId, String receiverId, Timestamp currentTime}) async {
+    DocumentSnapshot senderSnapshot =
+        await getContactsDocument(of: senderId, to: receiverId).get();
+    DocumentSnapshot receiverSnapshot =
+        await getContactsDocument(of: receiverId, to: senderId).get();
+
+    if (!senderSnapshot.exists) {
+      // if sender doesnot have receiver as a contact then add to contacts
+      Contact senderContact = Contact(uid: receiverId, addedOn: currentTime);
+      var senderContactMap = senderContact.toMap(senderContact);
+      getContactsDocument(of: senderId, to: receiverId)
+          .setData(senderContactMap);
+    }
+    if (!receiverSnapshot.exists) {
+      // if receiver doesnot have sender as a contact then add to contacts
+      Contact receiverContact = Contact(uid: senderId, addedOn: currentTime);
+      var receiverContactMap = receiverContact.toMap(receiverContact);
+      getContactsDocument(of: receiverId, to: senderId)
+          .setData(receiverContactMap);
+    }
   }
 
   Future<String> uploadImageToStorage(File image) async {
@@ -143,15 +177,19 @@ class FirebaseMethods {
       type: 'image',
     );
     var map = _message.toImageMap();
+    Timestamp currentTime = Timestamp.now();
     // set the data to database
-    await firestore
-        .collection(kMessagesCollection)
+    await _messagesCollection
         .document(_message.receiverId)
         .collection(_message.senderId)
         .add(map);
 
-    return await firestore
-        .collection(kMessagesCollection)
+    addToContacts(
+        senderId: _message.senderId,
+        receiverId: _message.receiverId,
+        currentTime: currentTime);
+
+    return await _messagesCollection
         .document(_message.senderId)
         .collection(_message.receiverId)
         .add(map);
@@ -170,4 +208,38 @@ class FirebaseMethods {
 
     setImageMsg(url, senderId, receiverId);
   }
+
+  Stream<QuerySnapshot> fetchcontactsStream({String userId}) => _userCollection
+      .document(userId)
+      .collection(kContactsCollection)
+      .snapshots();
+
+  Stream<QuerySnapshot> fetchLastMessageStream(
+          {String senderId, String receiverId}) =>
+      _messagesCollection
+          .document(senderId)
+          .collection(receiverId)
+          .orderBy('timestamp')
+          .snapshots();
+
+  Future<User> getUserDetilsById({String id}) async {
+    try {
+      DocumentSnapshot documentSnapshot =
+          await _userCollection.document(id).get();
+      return User.fromMap(documentSnapshot.data);
+    } catch (e) {
+      print('error getting user details by id: $e');
+      return null;
+    }
+  }
+
+  void setUserState({@required String userId, @required UserState userState}) {
+    int stateNum = Utils.stateToNum(userState);
+    _userCollection.document(userId).updateData({
+      'state': stateNum,
+    });
+  }
+
+  Stream<DocumentSnapshot> getUserStateStream({@required String uid}) =>
+      _userCollection.document(uid).snapshots();
 }

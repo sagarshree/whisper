@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:whisper/enum/user_state.dart';
 import 'package:whisper/provider/image_upload_provider.dart';
 import 'package:whisper/provider/user_provider.dart';
 import 'package:whisper/resources/firebase_repository.dart';
@@ -57,6 +58,8 @@ class _HomeState extends State<Home> {
             future: _firebaseRepository.getCurrentUser(),
             builder: (context, AsyncSnapshot<FirebaseUser> snapshot) {
               if (snapshot.hasData) {
+                _firebaseRepository.setUserState(
+                    userId: snapshot.data.uid, userState: UserState.Online);
                 print('data = ${snapshot.data}');
                 return HomeScreen();
               } else {

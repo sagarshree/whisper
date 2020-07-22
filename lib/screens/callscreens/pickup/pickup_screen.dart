@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:whisper/models/call.dart';
 import 'package:whisper/resources/call_methods.dart';
 import 'package:whisper/screens/callscreens/call_screen.dart';
+import 'package:whisper/utils/permissions.dart';
 import 'package:whisper/utils/universal_constants.dart';
 
 class PickupScreen extends StatelessWidget {
@@ -52,26 +53,39 @@ class PickupScreen extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                IconButton(
-                    icon: Icon(
-                      Icons.call_end,
-                      color: Colors.redAccent,
-                    ),
-                    onPressed: () async {
-                      callMethods.endCall(call: call);
-                    }),
+                RawMaterialButton(
+                  onPressed: () => callMethods.endCall(call: call),
+                  child: Icon(
+                    Icons.call_end,
+                    color: Colors.white,
+                    size: 35.0,
+                  ),
+                  shape: CircleBorder(),
+                  elevation: 2.0,
+                  fillColor: Colors.redAccent,
+                  padding: const EdgeInsets.all(15.0),
+                ),
                 SizedBox(
                   width: 25,
                 ),
-                IconButton(
-                    icon: Icon(
-                      Icons.call,
-                      color: Colors.green,
-                    ),
-                    onPressed: () => Navigator.push(context,
-                            MaterialPageRoute(builder: (context) {
-                          return CallScreen(call: call);
-                        }))),
+                RawMaterialButton(
+                  onPressed: () async =>
+                      await Permissions.cameraAndMicrophonePermissionsGranted()
+                          ? Navigator.push(context,
+                              MaterialPageRoute(builder: (context) {
+                              return CallScreen(call: call);
+                            }))
+                          : {},
+                  child: Icon(
+                    Icons.call_end,
+                    color: Colors.white,
+                    size: 35.0,
+                  ),
+                  shape: CircleBorder(),
+                  elevation: 2.0,
+                  fillColor: Colors.green,
+                  padding: const EdgeInsets.all(15.0),
+                ),
               ],
             )
           ],

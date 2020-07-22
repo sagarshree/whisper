@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter/widgets.dart';
 import 'package:whisper/constants/strings.dart';
 import 'package:whisper/models/call.dart';
 
@@ -33,7 +34,8 @@ class CallMethods {
     }
   }
 
-  Future<bool> endCall({Call call}) async {
+  Future<bool> endCall({Call call, BuildContext context}) async {
+    // Navigator.pop(context);
     try {
       await callCollection.document(call.callerId).delete();
       await callCollection.document(call.receiverId).delete();

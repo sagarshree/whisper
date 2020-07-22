@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:gradient_app_bar/gradient_app_bar.dart';
 import 'package:whisper/models/user.dart';
 import 'package:whisper/resources/firebase_repository.dart';
+import 'package:whisper/screens/callscreens/pickup/pickup_layout.dart';
 import 'package:whisper/screens/chatscreens/chat_screen.dart';
 import 'package:whisper/utils/universal_constants.dart';
 import 'package:whisper/widgets/custom_tile.dart';
@@ -149,12 +150,14 @@ class _SearchScreenState extends State<SearchScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: UniversalVariables.blackColor,
-      appBar: searchAppbar(context),
-      body: Container(
-        padding: EdgeInsets.symmetric(horizontal: 20),
-        child: buildSuggestions(query),
+    return PickupLayout(
+      scaffold: Scaffold(
+        backgroundColor: UniversalVariables.blackColor,
+        appBar: searchAppbar(context),
+        body: Container(
+          padding: EdgeInsets.symmetric(horizontal: 20),
+          child: buildSuggestions(query),
+        ),
       ),
     );
   }
