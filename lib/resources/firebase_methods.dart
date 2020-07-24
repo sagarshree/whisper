@@ -82,10 +82,15 @@ class FirebaseMethods {
         .setData(user.toMap(user));
   }
 
-  Future<void> signOut() async {
-    // await _googleSignIn.disconnect();
-    await _googleSignIn.signOut();
-    await _auth.signOut();
+  Future<bool> signOut() async {
+    try {
+      await _googleSignIn.signOut();
+      await _auth.signOut();
+      return true;
+    } catch (e) {
+      print('Sign out error: $e');
+      return false;
+    }
   }
 
   Future<List<User>> fetchAllUsers(FirebaseUser currentUser) async {
@@ -233,9 +238,10 @@ class FirebaseMethods {
     }
   }
 
-  void setUserState({@required String userId, @required UserState userState}) {
+  void setUserState(
+      {@required String userId, @required UserState userState}) async {
     int stateNum = Utils.stateToNum(userState);
-    _userCollection.document(userId).updateData({
+    await _userCollection.document(userId).updateData({
       'state': stateNum,
     });
   }

@@ -1,16 +1,47 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:whisper/constants/strings.dart';
 import 'package:whisper/models/call.dart';
+import 'package:whisper/models/log.dart';
 import 'package:whisper/resources/call_methods.dart';
+import 'package:whisper/resources/local_db/repository/log_repository.dart';
 import 'package:whisper/screens/callscreens/call_screen.dart';
 import 'package:whisper/utils/permissions.dart';
 import 'package:whisper/utils/universal_constants.dart';
 
-class PickupScreen extends StatelessWidget {
+class PickupScreen extends StatefulWidget {
   final Call call;
-  final CallMethods callMethods = CallMethods();
 
   PickupScreen({@required this.call});
+
+  @override
+  _PickupScreenState createState() => _PickupScreenState();
+}
+
+class _PickupScreenState extends State<PickupScreen> {
+  final CallMethods callMethods = CallMethods();
+  bool isCallMissed = true;
+
+  addToLocalStorage({@required String callStatus}) {
+    Log log = Log(
+      callerName: widget.call.callerName,
+      callerPic: widget.call.callerPic,
+      receiverName: widget.call.receiverName,
+      receiverPic: widget.call.receiverPic,
+      timestamp: DateTime.now().toString(),
+      callStatus: callStatus,
+    );
+    LogRepository.addLogs(log);
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    if (isCallMissed) {
+      addToLocalStorage(callStatus: kCallStatusmissed);
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,14 +65,15 @@ class PickupScreen extends StatelessWidget {
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
                     image: DecorationImage(
-                        image: CachedNetworkImageProvider(call.callerPic))),
+                        image:
+                            CachedNetworkImageProvider(widget.call.callerPic))),
               ),
             ),
             SizedBox(
               height: 15,
             ),
             Text(
-              call.callerName,
+              widget.call.callerName,
               style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 20,
@@ -54,7 +86,11 @@ class PickupScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 RawMaterialButton(
-                  onPressed: () => callMethods.endCall(call: call),
+                  onPressed: () async {
+                    isCallMissed = false;
+                    addToLocalStorage(callStatus: kCallStatusReceived);
+                    await callMethods.endCall(call: widget.call);
+                  },
                   child: Icon(
                     Icons.call_end,
                     color: Colors.white,
@@ -69,13 +105,20 @@ class PickupScreen extends StatelessWidget {
                   width: 25,
                 ),
                 RawMaterialButton(
-                  onPressed: () async =>
-                      await Permissions.cameraAndMicrophonePermissionsGranted()
-                          ? Navigator.push(context,
-                              MaterialPageRoute(builder: (context) {
-                              return CallScreen(call: call);
-                            }))
-                          : {},
+                  onPressed: () async {
+                    isCallMissed = false;
+                    addToLocalStorage(callStatus: kCallStatusReceived);
+                    await Permissions.cameraAndMicrophonePermissionsGranted()
+                        ? Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) {
+                                return CallScreen(call: widget.call);
+                              },
+                            ),
+                          )
+                        : () {};
+                  },
                   child: Icon(
                     Icons.call_end,
                     color: Colors.white,

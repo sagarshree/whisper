@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:whisper/enum/user_state.dart';
 import 'package:whisper/models/user.dart';
 import 'package:whisper/resources/firebase_repository.dart';
+import 'package:whisper/utils/universal_constants.dart';
 import 'package:whisper/utils/utils.dart';
 
 class OnlineDotIndicator extends StatelessWidget {
@@ -36,10 +37,12 @@ class OnlineDotIndicator extends StatelessWidget {
         return Align(
           alignment: Alignment.bottomRight,
           child: Container(
-            height: 10,
-            width: 10,
+            height: 12,
+            width: 12,
             margin: EdgeInsets.only(right: 8, top: 8),
             decoration: BoxDecoration(
+              border:
+                  Border.all(color: UniversalVariables.blackColor, width: 1.5),
               shape: BoxShape.circle,
               color: getColor(user?.state),
             ),

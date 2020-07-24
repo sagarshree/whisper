@@ -5,3 +5,6 @@ const String kEmailField = 'email';
 const String kPhotoMessageType = 'image';
 const String kCallCollection = 'calls';
 const String kContactsCollection = 'contacts';
+const String kCallStatusDialled = 'dialled';
+const String kCallStatusReceived = 'received';
+const String kCallStatusmissed = 'missed';

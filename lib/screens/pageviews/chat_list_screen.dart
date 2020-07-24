@@ -6,6 +6,7 @@ import 'package:whisper/models/contacts.dart';
 import 'package:whisper/provider/user_provider.dart';
 import 'package:whisper/resources/firebase_repository.dart';
 import 'package:whisper/screens/pageviews/widgets/contact_view.dart';
+import 'package:whisper/screens/pageviews/widgets/main_app_bar.dart';
 import 'package:whisper/screens/pageviews/widgets/quiet_box.dart';
 import 'package:whisper/utils/universal_constants.dart';
 import 'package:whisper/utils/utils.dart';
@@ -16,43 +17,31 @@ import 'widgets/new_chat_button.dart';
 import 'widgets/user_circle.dart';
 
 class ChatListScreen extends StatelessWidget {
-  CustomAppBar customAppBar(BuildContext context) {
-    return CustomAppBar(
-      leading: IconButton(
-        icon: Icon(
-          Icons.notifications,
-          color: Colors.white,
-        ),
-        onPressed: () {},
-      ),
-      title: UserCircle(),
-      centerTitle: true,
-      actions: <Widget>[
-        IconButton(
-          icon: Icon(
-            Icons.search,
-            color: Colors.white,
-          ),
-          onPressed: () {
-            Navigator.pushNamed(context, '/search_screen');
-          },
-        ),
-        IconButton(
-          icon: Icon(
-            Icons.more_vert,
-            color: Colors.white,
-          ),
-          onPressed: () {},
-        ),
-      ],
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: UniversalVariables.blackColor,
-      appBar: customAppBar(context),
+      appBar: MainAppBar(
+        title: UserCircle(),
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(
+              Icons.search,
+              color: Colors.white,
+            ),
+            onPressed: () {
+              Navigator.pushNamed(context, '/search_screen');
+            },
+          ),
+          IconButton(
+            icon: Icon(
+              Icons.more_vert,
+              color: Colors.white,
+            ),
+            onPressed: () {},
+          ),
+        ],
+      ),
       floatingActionButton: NewChatButton(),
       body: ChatListContainer(),
     );

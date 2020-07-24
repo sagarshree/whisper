@@ -6,9 +6,12 @@ import 'package:provider/provider.dart';
 import 'package:whisper/enum/user_state.dart';
 import 'package:whisper/provider/user_provider.dart';
 import 'package:whisper/resources/firebase_repository.dart';
+import 'package:whisper/resources/local_db/repository/log_repository.dart';
 import 'package:whisper/screens/callscreens/pickup/pickup_layout.dart';
 import 'package:whisper/screens/pageviews/chat_list_screen.dart';
 import 'package:whisper/utils/universal_constants.dart';
+
+import 'pageviews/logs/log_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -28,11 +31,13 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     //the framework will throw an error if we use provider directly
     //because there is no context during initstate call,
     //so we have to use addPostFrameCallback with SchedulerBinding...
-    SchedulerBinding.instance.addPostFrameCallback((_) {
+    SchedulerBinding.instance.addPostFrameCallback((_) async {
       userProvider = Provider.of<UserProvider>(context, listen: false);
-      userProvider.refreshUser();
+      await userProvider.refreshUser();
       _firebaseRepository.setUserState(
           userId: userProvider.getUser.uid, userState: UserState.Online);
+
+      LogRepository.init(isHive: false);
     });
     _pageController = PageController();
 
@@ -103,12 +108,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
           onPageChanged: onPageChanged,
           children: <Widget>[
             ChatListScreen(),
-            Center(
-              child: Text(
-                'Call Logs',
-                style: TextStyle(color: Colors.white),
-              ),
-            ),
+            LogScreen(),
             Center(
               child: Text(
                 'Contact Page',
