@@ -9,6 +9,7 @@ import 'package:whisper/screens/login_screen.dart';
 import 'package:whisper/screens/pageviews/widgets/online_dot_indicator.dart';
 import 'package:whisper/screens/pageviews/widgets/shimmering_logo.dart';
 import 'package:whisper/utils/universal_constants.dart';
+import 'package:whisper/widgets/alert_dialog.dart';
 import 'package:whisper/widgets/appbar.dart';
 
 class UserDetailsContainer extends StatelessWidget {
@@ -32,41 +33,14 @@ class UserDetailsContainer extends StatelessWidget {
     }
 
     logoutAlert(Function func) {
-      return showDialog(
-        context: context,
-        builder: (context) {
-          return AlertDialog(
-            shape: RoundedRectangleBorder(
-              borderRadius: new BorderRadius.circular(20.0),
-            ),
-            backgroundColor: UniversalVariables.blackColor,
-            elevation: 5,
-            title: Text(
-              'Logout',
-              style: TextStyle(fontSize: 20, color: Colors.white),
-            ),
-            content: Text(
-              'Are you sure?',
-              style: TextStyle(fontSize: 17, color: Colors.white),
-            ),
-            actions: <Widget>[
-              FlatButton(
-                onPressed: func,
-                child: Text(
-                  'Yes',
-                  style: TextStyle(fontSize: 17, color: Colors.white),
-                ),
-              ),
-              FlatButton(
-                onPressed: () => Navigator.pop(context),
-                child: Text(
-                  'No',
-                  style: TextStyle(fontSize: 17, color: Colors.white),
-                ),
-              )
-            ],
-          );
-        },
+      return showAlertDialog(
+        titleText: 'Logout',
+        contentText: 'Are you sure?',
+        button1Text: 'Yes',
+        button2Text: 'No',
+        button1Function: func,
+        parentContext: context,
+        button2Function: () => Navigator.pop(context),
       );
     }
 

@@ -52,7 +52,6 @@ class _HomeState extends State<Home> {
   FirebaseRepository _firebaseRepository = FirebaseRepository();
   @override
   Widget build(BuildContext context) {
-    // _firebaseRepository.signOut();
     return Scaffold(
         body: FutureBuilder(
             future: _firebaseRepository.getCurrentUser(),

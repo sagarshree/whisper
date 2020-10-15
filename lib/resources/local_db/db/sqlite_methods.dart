@@ -81,6 +81,7 @@ class SqliteMethods implements LogInterface {
       return logList;
     } catch (e) {
       print('Error getting data from local database: $e');
+      return null;
     }
   }
 
@@ -98,7 +99,7 @@ class SqliteMethods implements LogInterface {
   deleteLog(int logId) async {
     var dbClient = await db;
     return await dbClient
-        .delete(tableName, where: '$id = ?', whereArgs: [logId]);
+        .delete(tableName, where: '$id = ?', whereArgs: [logId + 1]);
   }
 
   @override

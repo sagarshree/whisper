@@ -6,8 +6,10 @@ import 'package:whisper/models/log.dart';
 import 'package:whisper/resources/local_db/interface/log_interface.dart';
 
 class HiveMethods implements LogInterface {
-  String hiveBox = 'call_logs';
+  String hiveBox = '';
 
+  @override
+  openDb(dbName) => (hiveBox = dbName);
   @override
   init() async {
     Directory dir = await getApplicationDocumentsDirectory();

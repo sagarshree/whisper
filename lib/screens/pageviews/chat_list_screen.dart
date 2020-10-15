@@ -2,6 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:shimmer/shimmer.dart';
 import 'package:whisper/models/contacts.dart';
 import 'package:whisper/provider/user_provider.dart';
 import 'package:whisper/resources/firebase_repository.dart';
@@ -63,7 +64,11 @@ class ChatListContainer extends StatelessWidget {
               var docList = snapshot.data.documents;
 
               if (docList.isEmpty) {
-                return QuietBox();
+                return QuietBox(
+                  title: 'This is where all the contacts are listed',
+                  subtitle:
+                      'Search for your friends and family members to get connected with them',
+                );
               }
               return ListView.builder(
                 itemBuilder: (context, index) {
@@ -78,8 +83,37 @@ class ChatListContainer extends StatelessWidget {
                 itemCount: docList.length,
               );
             }
-            return Center(
-              child: CircularProgressIndicator(),
+            return Shimmer.fromColors(
+              baseColor: UniversalVariables.separatorColor.withOpacity(0.7),
+              highlightColor: UniversalVariables.separatorColor,
+              child: Padding(
+                padding: const EdgeInsets.only(top: 10, bottom: 10, right: 10),
+                child: CustomTile(
+                  mini: false,
+                  leading: CircleAvatar(
+                    maxRadius: 30,
+                    backgroundColor: Colors.grey,
+                  ),
+                  title: Container(
+                    margin: EdgeInsets.only(bottom: 5),
+                    height: 15,
+                    width: 200,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(5),
+                      color: Colors.grey,
+                    ),
+                  ),
+                  subTitle: Container(
+                    margin: EdgeInsets.only(bottom: 10),
+                    height: 12,
+                    width: 100,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(5),
+                      color: Colors.grey,
+                    ),
+                  ),
+                ),
+              ),
             );
           }),
     );

@@ -390,7 +390,7 @@ class _ChatScreenState extends State<ChatScreen> {
       ),
       decoration: message.type != kPhotoMessageType
           ? BoxDecoration(
-              color: UniversalVariables.gradientColorStart,
+              color: UniversalVariables.receiverColor,
               borderRadius: BorderRadius.only(
                 bottomRight: messageRadius,
                 topRight: messageRadius,

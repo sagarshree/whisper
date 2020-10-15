@@ -3,20 +3,27 @@ import 'package:whisper/screens/search_screen.dart';
 import 'package:whisper/utils/universal_constants.dart';
 
 class QuietBox extends StatelessWidget {
+  final String title;
+  final String subtitle;
+
+  const QuietBox({@required this.title, @required this.subtitle});
   @override
   Widget build(BuildContext context) {
     return Center(
       child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 25),
+        padding: EdgeInsets.symmetric(horizontal: 30),
         child: Container(
-          color: UniversalVariables.separatorColor,
+          decoration: BoxDecoration(
+            color: UniversalVariables.separatorColor,
+            borderRadius: BorderRadius.circular(20),
+          ),
           padding: EdgeInsets.symmetric(vertical: 35, horizontal: 25),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
               Text(
-                'This is where all the contacts are listed',
+                title,
                 textAlign: TextAlign.center,
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
@@ -27,7 +34,7 @@ class QuietBox extends StatelessWidget {
                 height: 25,
               ),
               Text(
-                'Search for your friends and family members to get connected with them',
+                subtitle,
                 textAlign: TextAlign.center,
                 style: TextStyle(
                     letterSpacing: 1.1,
@@ -39,6 +46,9 @@ class QuietBox extends StatelessWidget {
                 height: 25,
               ),
               FlatButton(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
                 color: UniversalVariables.lightBlueColor,
                 child: Text(
                   'Search Contacts',
